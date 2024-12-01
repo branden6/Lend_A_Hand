@@ -1,1 +1,1 @@
-Lend a Hand is a project developed by 4 computer science students at UBC- Okanagan. It was created for our project in COSC 341 - Human Computer Interaction. There are 4 basic features being implemented and a presentation being done on the features that were implemented.
+"Lend a Hand" is a project developed by four computer science students at UBC Okanagan as part of their COSC 341—Human Computer Interaction course. The project focuses on implementing four core features, which will be showcased in a presentation highlighting the design and implementation of the features. 
