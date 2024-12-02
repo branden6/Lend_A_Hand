@@ -1,5 +1,4 @@
 <resources>
     <string name="app_name">Lend a Hand</string>
     <string name="title_activity_custom_location">CustomLocationActivity</string>
-    <string name="maps_api_key">AIzaSyDFCvBEUwHZ9vzDyaIx31OEbOsnxsPSYOY</string>
 </resources>
