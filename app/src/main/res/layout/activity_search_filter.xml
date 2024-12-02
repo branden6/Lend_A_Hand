@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchFilterActivity">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
+    <SearchView
+        android:id="@+id/HomeScreenSearchFilter"
+        android:layout_width="240dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:queryHint="Search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </SearchView>
+
+    <Button
+        android:id="@+id/filterButton2"
+        android:layout_width="60dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="filter"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="96dp"
+        android:text="Location: "
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupLocation"
+        android:layout_width="300dp"
+        android:layout_height="105dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="116dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/radioButtonCurrentLocation"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Current Location (Within 25 km)"
+            android:textSize="14sp" />
+
+        <RadioButton
+            android:id="@+id/radioButtonCustomLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Custom Radius"
+            android:textSize="14sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textViewPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="220dp"
+        android:text="Price: "
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewMin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="248dp"
+        android:text="Min:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextMinPrice"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="232dp"
+        android:ems="10"
+        android:hint="$"
+        android:inputType="text"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewMaxPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="180dp"
+        android:layout_marginTop="248dp"
+        android:text="Max:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextMaxPrice"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="232dp"
+        android:ems="10"
+        android:hint="$"
+        android:inputType="text"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewTypeJob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="280dp"
+        android:text="Type of job:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ScrollView
+        android:layout_width="300dp"
+        android:layout_height="290dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="300dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="250dp"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/checkBoxConcrete"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Concrete" />
+
+            <CheckBox
+                android:id="@+id/checkBoxWelding"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Welding" />
+
+            <CheckBox
+                android:id="@+id/checkBoxCarpentry"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Carpentry" />
+
+            <CheckBox
+                android:id="@+id/checkBoxRoofing"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Roofing" />
+
+            <CheckBox
+                android:id="@+id/checkBoxElectrical"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Electrical" />
+
+            <CheckBox
+                android:id="@+id/checkBoxPainting"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Painting" />
+
+            <CheckBox
+                android:id="@+id/checkBoxDrills"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Drills" />
+
+            <CheckBox
+                android:id="@+id/checkBoxHammers"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Hammers" />
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/textViewCustomerReview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="595dp"
+        android:text="Customer Review:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="45dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton
+            android:id="@+id/radioButton4starsCustomerReview"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="4 stars and up" />
+
+        <RadioButton
+            android:id="@+id/radioButton3stars"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="3 stars and up" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonSeeResults"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="See Results"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
