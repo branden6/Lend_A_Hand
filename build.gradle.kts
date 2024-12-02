@@ -1,8 +1,5 @@
-// Top-level build.gradle.kts (usually in the root project folder)
-
 plugins {
-    alias(libs.plugins.android.application) apply false
-    alias(libs.plugins.google.android.libraries.mapsplatform.secrets.gradle.plugin) apply false
+    id("com.android.application") version "8.6.0" apply false
+    id("com.android.library") version "8.6.0" apply false
+    id("org.jetbrains.kotlin.android") version "1.9.0" apply false
 }
-
-val googleApiKey: String? = rootProject.findProperty("google_api_key") as String?
