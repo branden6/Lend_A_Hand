@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Lend a Hand</string>
+
+    <string-array name="payment_types">
+        <item>Visa</item>
+        <item>Mastercard</item>
+        <item>Google Pay</item>
+    </string-array>
+
+    <string name="terms_text">
+        I agree to the <u>Terms and Conditions.</u>
+    </string>
 </resources>
