@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- Permissions -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -16,55 +17,29 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LendAHand"
         tools:targetApi="31">
-        <activity
-            android:name=".ListingsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".GalleryActivity"
-            android:exported="false" />
-        <activity
-            android:name=".DeleteListingActivity"
-            android:exported="false" />
-        <activity
-            android:name=".EditListingActivity"
-            android:exported="false" />
-        <activity
-            android:name=".CreateListingActivity"
-            android:exported="false" />
-        <!--
-             TODO: Before you run your application, you need a Google Maps API key.
 
-             To get one, follow the directions here:
-
-                https://developers.google.com/maps/documentation/android-sdk/get-api-key
-
-             Once you have your API key (it starts with "AIza"), define a new property in your
-             project's local.properties file (e.g. MAPS_API_KEY=Aiza...), and replace the
-             "YOUR_API_KEY" string in this file with "${MAPS_API_KEY}".
-        -->
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyDFCvBEUwHZ9vzDyaIx31OEbOsnxsPSYOY" />
-
-        <activity
-            android:name=".CustomLocationActivity"
-            android:exported="false"
-            android:label="@string/title_activity_custom_location" />
-        <activity
-            android:name=".ResultsPage"
-            android:exported="false" />
-        <activity
-            android:name=".SearchFilterActivity"
-            android:exported="false" />
+        <!-- Main Launcher Activity -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
 
+        <!-- Other Activities -->
+        <activity android:name=".ListingsActivity" android:exported="false" />
+        <activity android:name=".GalleryActivity" android:exported="false" />
+        <activity android:name=".CreateListingActivity" android:exported="false" />
+        <activity android:name=".CustomLocationActivity" android:exported="false" />
+        <activity android:name=".ResultsPage" android:exported="false" />
+        <activity android:name=".SearchFilterActivity" android:exported="false" />
+        <activity android:name=".WriteReviewActivity" android:exported="false" />
+
+        <!-- Google Maps API Key -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="${MAPS_API_KEY}" />
+    </application>
 </manifest>
