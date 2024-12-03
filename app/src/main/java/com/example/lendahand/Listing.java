@@ -1,38 +1,43 @@
 package com.example.lendahand;
 
 public class Listing {
-    private String id;
     private String title;
     private String description;
-    private double price;
-    private String availability;
-    private String imageUri;
+    private int imageResId;
+    private String price;
+    private String priceUnit;
+    private String postalCode;
 
-    public Listing(String id, String title, String description, double price, String availability, String imageUri) {
-        this.id = id;
+    public Listing(String title, String description, int imageResId, String price, String priceUnit, String postalCode) {
         this.title = title;
         this.description = description;
+        this.imageResId = imageResId;
         this.price = price;
-        this.availability = availability;
-        this.imageUri = imageUri;
+        this.priceUnit = priceUnit;
+        this.postalCode = postalCode;
     }
 
-    // Getters and setters for all fields
-    public String getId() { return id; }
-    public void setId(String id) { this.id = id; }
+    public String getTitle() {
+        return title;
+    }
 
-    public String getTitle() { return title; }
-    public void setTitle(String title) { this.title = title; }
+    public String getDescription() {
+        return description;
+    }
 
-    public String getDescription() { return description; }
-    public void setDescription(String description) { this.description = description; }
+    public int getImageResId() {
+        return imageResId;
+    }
 
-    public double getPrice() { return price; }
-    public void setPrice(double price) { this.price = price; }
+    public String getPrice() {
+        return price;
+    }
 
-    public String getAvailability() { return availability; }
-    public void setAvailability(String availability) { this.availability = availability; }
+    public String getPriceUnit() {
+        return priceUnit;
+    }
 
-    public String getImageUri() { return imageUri; }
-    public void setImageUri(String imageUri) { this.imageUri = imageUri; }
+    public String getPostalCode() {
+        return postalCode;
+    }
 }

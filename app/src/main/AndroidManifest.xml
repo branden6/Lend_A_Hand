@@ -17,13 +17,19 @@
         android:theme="@style/Theme.LendAHand"
         tools:targetApi="31">
         <activity
-            android:name="com.example.lendahand.DeleteListingActivity"
+            android:name=".ListingsActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.lendahand.EditListingActivity"
+            android:name=".GalleryActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.lendahand.CreateListingActivity"
+            android:name=".DeleteListingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EditListingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CreateListingActivity"
             android:exported="false" />
         <!--
              TODO: Before you run your application, you need a Google Maps API key.
