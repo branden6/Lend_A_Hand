@@ -1,7 +1,7 @@
 package com.example.lendahand;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 
 import android.os.Bundle;
 
@@ -12,16 +12,13 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-
 public class CustomLocationActivity extends AppCompatActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_custom_location);
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
@@ -31,22 +28,22 @@ public class CustomLocationActivity extends AppCompatActivity implements OnMapRe
         mapFragment.getMapAsync(this);
     }
 
-
-    /**
-     * Manipulates the map once available.
-     * This callback is triggered when the map is ready to be used.
-     * This is where we can add markers or lines, add listeners or move the camera. In this case,
-     * we just add a marker near Sydney, Australia.
-     * If Google Play services is not installed on the device, the user will be prompted to install
-     * it inside the SupportMapFragment. This method will only be triggered once the user has
-     * installed Google Play services and returned to the app.
-     */
     @Override
-    public void onMapReady(GoogleMap googleMap) {
+    public void onMapReady(@NonNull GoogleMap googleMap) {
+        mMap = googleMap;
 
-        LatLng location = new LatLng(40.7128, -74.0060);
-        googleMap.addMarker(new MarkerOptions().position(location).title("New York"));
-        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(location, 15));
+        // Add markers for locations in SearchFeature
+        LatLng kelowna = new LatLng(49.8801, -119.4436);
+        mMap.addMarker(new MarkerOptions().position(kelowna).title("Kelowna"));
+
+        LatLng UBCO = new LatLng(49.9394, -119.3948);
+        mMap.addMarker(new MarkerOptions().position(UBCO).title("UBCO"));
+
+        LatLng LakeCountry = new LatLng(50.0537, -119.4106);
+        mMap.addMarker(new MarkerOptions().position(LakeCountry).title("Lake Country"));
+
+        // Center the camera and enable zoom controls
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(kelowna, 10));
+        mMap.getUiSettings().setZoomControlsEnabled(true);
     }
-
 }
