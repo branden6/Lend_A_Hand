@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select an Image"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:paddingBottom="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/image_backarrow"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/backarrow"
+                android:contentDescription="Back Arrow"
+                android:padding="8dp" />
+
+            <ImageView
+                android:id="@+id/image_bobcat"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/bobcat"
+                android:contentDescription="Bobcat"
+                android:padding="8dp" />
+
+            <ImageView
+                android:id="@+id/image_hammerdrill"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/hammerdrill"
+                android:contentDescription="Hammer Drill"
+                android:padding="8dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/image_laserlevel"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/laserlevel"
+                android:contentDescription="Laser Level"
+                android:padding="8dp" />
+
+            <ImageView
+                android:id="@+id/image_skillsaw"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/skillsaw"
+                android:contentDescription="Skill Saw"
+                android:padding="8dp" />
+
+            <ImageView
+                android:id="@+id/image_welder"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/welder"
+                android:contentDescription="Welder"
+                android:padding="8dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/image_weldingmask"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/weldingmask"
+                android:contentDescription="Welding Mask"
+                android:padding="8dp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
