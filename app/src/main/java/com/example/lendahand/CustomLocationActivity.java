@@ -3,7 +3,6 @@ package com.example.lendahand;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-
 import android.os.Bundle;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -13,11 +12,9 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-
 public class CustomLocationActivity extends AppCompatActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +32,7 @@ public class CustomLocationActivity extends AppCompatActivity implements OnMapRe
     public void onMapReady(@NonNull GoogleMap googleMap) {
         mMap = googleMap;
 
+        // Add markers for locations in SearchFeature
         LatLng kelowna = new LatLng(49.8801, -119.4436);
         mMap.addMarker(new MarkerOptions().position(kelowna).title("Kelowna"));
 
@@ -44,9 +42,8 @@ public class CustomLocationActivity extends AppCompatActivity implements OnMapRe
         LatLng LakeCountry = new LatLng(50.0537, -119.4106);
         mMap.addMarker(new MarkerOptions().position(LakeCountry).title("Lake Country"));
 
-
+        // Center the camera and enable zoom controls
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(kelowna, 10));
         mMap.getUiSettings().setZoomControlsEnabled(true);
-        }
-
+    }
 }
