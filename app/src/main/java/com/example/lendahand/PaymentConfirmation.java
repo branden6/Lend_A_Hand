@@ -18,7 +18,7 @@ public class PaymentConfirmation extends AppCompatActivity {
 
         returnHome = findViewById(R.id.returnHome);
         returnHome.setOnClickListener(v -> {
-            Intent intent = new Intent(PaymentConfirmation.this, ListingPage.class);
+            Intent intent = new Intent(PaymentConfirmation.this, MainActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
             finish();
