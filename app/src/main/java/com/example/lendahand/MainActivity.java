@@ -41,7 +41,13 @@ public class MainActivity extends AppCompatActivity { //homescreen
             startActivity(intent);
         });
 
+        Button buttonCreateListing = findViewById(R.id.buttonCreateListing);
 
+        // Set click listener to navigate to CreateListingActivity
+        buttonCreateListing.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, CreateListingActivity.class);
+            startActivity(intent);
+        });
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);

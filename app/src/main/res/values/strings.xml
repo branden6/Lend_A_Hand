@@ -1,5 +1,15 @@
 <resources>
     <string name="app_name">Lend a Hand</string>
     <string name="title_activity_custom_location">CustomLocationActivity</string>
-    <string name="maps_api_key">AIzaSyDFCvBEUwHZ9vzDyaIx31OEbOsnxsPSYOY</string>
+
+    <string name="price_option_day">/day</string>
+    <string name="price_option_week">/week</string>
+    <string name="price_option_hour">/hour</string>
+    <string name="price_option_month">/month</string>
+    <string-array name="price_options">
+        <item>@string/price_option_day</item>
+        <item>@string/price_option_week</item>
+        <item>@string/price_option_hour</item>
+        <item>@string/price_option_month</item>
+    </string-array>
 </resources>
