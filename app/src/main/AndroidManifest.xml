@@ -42,6 +42,21 @@
             android:name=".SearchFilterActivity"
             android:exported="false" />
         <activity
+            android:name=".ListingPage"
+            android:exported="false" />
+        <activity
+            android:name=".PaymentConfirmation"
+            android:exported="false" />
+        <activity
+            android:name=".PaymentProcessing"
+            android:exported="false" />
+        <activity
+            android:name=".SelectDates"
+            android:exported="false" />
+        <activity
+            android:name=".SelectTime"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
