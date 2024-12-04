@@ -15,7 +15,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class ResultsPage extends AppCompatActivity {
 
-    Button clearFilters, filterBackButton;
+    Button clearFilters;
+    ImageView filterBackButton;
     TextView textView1, textView2, textView3;
     ImageView img1, img2, img3;
     RatingBar ratingBar1, ratingBar2, ratingBar3;
@@ -32,7 +33,7 @@ public class ResultsPage extends AppCompatActivity {
         showData();
         backToFilter();
 
-        filterBackButton = findViewById(R.id.filterButton2);
+        filterBackButton = findViewById(R.id.imageViewBurger2);
         filterBackButton.setOnClickListener(v -> {
             Intent intent = new Intent(ResultsPage.this, SearchFilterActivity.class);
             intent.putExtra("Concrete", concreteSelected);

@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity { //homescreen
     ImageView imageView1, imageView2, imageView3, imageView4, imageView5, imageView6;
     TextView textView1, textView2, textView3, textView4, textView5, textView6;
 
-    Button filterButton;
+    ImageView filterButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity { //homescreen
         setTextPriceAndListing();
 
         //When filter button is selected, go to SearchFilterActivity class:
-        filterButton = findViewById(R.id.filterButton);
+        filterButton = findViewById(R.id.imageViewBurger);
         filterButton.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, SearchFilterActivity.class);
             startActivity(intent);
