@@ -27,28 +27,28 @@ public class WriteReviewActivity extends AppCompatActivity {
         Button publishButton = findViewById(R.id.btnPublish);
         Button skipButton = findViewById(R.id.btnSkip);
 
-        // Logic for "Publish" button
+
         publishButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Optional: Save review data here
+
                 Toast.makeText(WriteReviewActivity.this, "Review Published!", Toast.LENGTH_SHORT).show();
 
-                // Navigate to the new MainActivity
+
                 Intent intent = new Intent(WriteReviewActivity.this, MainActivity.class);
                 startActivity(intent);
-                finish(); // Close the current activity
+                finish();
             }
         });
 
-        // Logic for "Skip" button
+
         skipButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Navigate to the new MainActivity
+
                 Intent intent = new Intent(WriteReviewActivity.this, MainActivity.class);
                 startActivity(intent);
-                finish(); // Close the current activity
+                finish();
             }
         });
     }

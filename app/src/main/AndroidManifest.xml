@@ -33,6 +33,11 @@
             android:name=".MainActivity"
             android:exported="true" />
 
+        <!-- Register SearchFilterActivity -->
+        <activity
+            android:name=".SearchFilterActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>

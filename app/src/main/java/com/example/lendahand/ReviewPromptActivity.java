@@ -24,7 +24,7 @@ public class ReviewPromptActivity extends AppCompatActivity {
         writeReviewButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Navigate to the write review screen
+
                 Intent intent = new Intent(ReviewPromptActivity.this, WriteReviewActivity.class);
                 startActivity(intent);
             }
@@ -33,7 +33,7 @@ public class ReviewPromptActivity extends AppCompatActivity {
         skipButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Navigate back to the home screen
+
                 Intent intent = new Intent(ReviewPromptActivity.this, MainActivity.class);
                 startActivity(intent);
             }

@@ -28,14 +28,14 @@ public class MainActivity extends AppCompatActivity { //homescreen
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        //setRating for each listing with method (rly a useless method but more for clarity/cleaner code in the onCreate):
+
         setRatingsOnListings();
-        //set the photo for each listing with method:
+
         setPicturesOnListings();
-        //set the listing price and name with method:
+
         setTextPriceAndListing();
 
-        //When filter button is selected, go to SearchFilterActivity class:
+
         filterButton = findViewById(R.id.filterButton);
         filterButton.setOnClickListener(new View.OnClickListener() {
             @Override
