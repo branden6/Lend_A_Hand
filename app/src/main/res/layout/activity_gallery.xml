@@ -28,7 +28,7 @@
                 android:id="@+id/image_backarrow"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/backarrow"
+                android:src="@drawable/back"
                 android:contentDescription="Back Arrow"
                 android:padding="8dp" />
 
