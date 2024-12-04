@@ -2,7 +2,6 @@ package com.example.lendahand;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RatingBar;
@@ -37,12 +36,9 @@ public class MainActivity extends AppCompatActivity { //homescreen
 
         //When filter button is selected, go to SearchFilterActivity class:
         filterButton = findViewById(R.id.filterButton);
-        filterButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, SearchFilterActivity.class);
-                startActivity(intent);
-            }
+        filterButton.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, SearchFilterActivity.class);
+            startActivity(intent);
         });
 
 
