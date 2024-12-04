@@ -87,6 +87,7 @@ public class SearchFilterActivity extends AppCompatActivity {
         locationGroup.setOnCheckedChangeListener((group, checkedId) -> {
             if (checkedId == R.id.radioButtonCustomLocation) {
                 Intent intent = new Intent(SearchFilterActivity.this, CustomLocationActivity.class);
+                intent.putExtra("CustomRadius", "customLocation");
                 startActivity(intent);
             }
         });
