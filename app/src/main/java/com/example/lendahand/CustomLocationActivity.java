@@ -49,6 +49,6 @@ public class CustomLocationActivity extends AppCompatActivity implements OnMapRe
 
         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(kelowna, 14));
         googleMap.getUiSettings().setZoomControlsEnabled(true);
-        }
+    }
 
 }
