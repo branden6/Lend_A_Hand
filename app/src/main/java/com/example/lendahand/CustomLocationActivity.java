@@ -38,14 +38,7 @@ public class CustomLocationActivity extends AppCompatActivity implements OnMapRe
         LatLng kelowna = new LatLng(49.8801, -119.4436);
         mMap.addMarker(new MarkerOptions().position(kelowna).title("Kelowna"));
 
-        LatLng UBCO = new LatLng(49.9394, -119.3948);
-        mMap.addMarker(new MarkerOptions().position(UBCO).title("UBCO"));
-
-        LatLng LakeCountry = new LatLng(50.0537, -119.4106);
-        mMap.addMarker(new MarkerOptions().position(LakeCountry).title("Lake Country"));
-
-
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(kelowna, 10));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(kelowna, 14));
         mMap.getUiSettings().setZoomControlsEnabled(true);
         }
 

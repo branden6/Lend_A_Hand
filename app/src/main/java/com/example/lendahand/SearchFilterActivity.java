@@ -4,7 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioButton;
@@ -21,6 +23,7 @@ public class SearchFilterActivity extends AppCompatActivity {
     ImageView imageViewBack;
     RadioGroup locationGroup;
     RadioButton radioButtonCurrentLocation, radioButtonCustomLocation;
+    CheckBox concrete, welding, carpentry, roofing, electrical, painting, drills, hammers;
 
     Button seeResults;
 
@@ -29,8 +32,28 @@ public class SearchFilterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_search_filter);
+        setupButtons();
 
-        //addDollarSignToPrices(); //doesnt work, Just adding a dollar sign on the entered values for min/max price
+        seeResults = findViewById(R.id.buttonSeeResults);
+        seeResults.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SearchFilterActivity.this, ResultsPage.class);
+                intent.putExtra("Concrete", concrete.isChecked());
+                intent.putExtra("Welding", welding.isChecked());
+                intent.putExtra("Carpentry", carpentry.isChecked());
+                intent.putExtra("Roofing", roofing.isChecked());
+                intent.putExtra("Electrical", electrical.isChecked());
+                intent.putExtra("Painting", painting.isChecked());
+                intent.putExtra("Drills", drills.isChecked());
+                intent.putExtra("Hammers", hammers.isChecked());
+                intent.putExtra("MinPrice", editTextMinPrice.getText().toString());
+                intent.putExtra("MaxPrice", editTextMaxPrice.getText().toString());
+                startActivity(intent);
+            }
+        });
+
+
 
         SelectedRadioLocations(); //if custom radius is selected, starts a new Google Maps view activity
         filterBackButton(); //if the back button is clicked while in the filters, it goes back to the homescreen
@@ -40,6 +63,16 @@ public class SearchFilterActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+    public void setupButtons(){
+        concrete = findViewById(R.id.checkBoxConcrete);
+        welding = findViewById(R.id.checkBoxWelding);
+        carpentry = findViewById(R.id.checkBoxCarpentry);
+        roofing = findViewById(R.id.checkBoxRoofing);
+        electrical = findViewById(R.id.checkBoxElectrical);
+        painting = findViewById(R.id.checkBoxPainting);
+        drills = findViewById(R.id.checkBoxDrills);
+        hammers = findViewById(R.id.checkBoxHammers);
     }
     public void filterBackButton(){
         imageViewBack = findViewById(R.id.imageViewBack);
@@ -62,22 +95,5 @@ public class SearchFilterActivity extends AppCompatActivity {
             }
         });
     }
-    public void addDollarSignToPrices(){
-        editTextMinPrice = findViewById(R.id.editTextMinPrice);
-        editTextMaxPrice = findViewById(R.id.editTextMaxPrice);
 
-        editTextMinPrice.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-            }
-            public void afterTextChanged(Editable s) {
-                editTextMaxPrice.setText("$" + editTextMaxPrice.getText().toString());
-                editTextMinPrice.setText("$" + editTextMinPrice.getText().toString());
-            }
-        });
-    }
 }
