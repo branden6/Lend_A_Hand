@@ -7,6 +7,16 @@
     android:layout_height="match_parent"
     tools:context=".ResultsPage">
 
+    <ImageView
+        android:id="@+id/imageViewBurger2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/hamburgericon" />
+
     <TextView
         android:id="@+id/textView11"
         android:layout_width="128dp"
@@ -106,17 +116,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_input_add" />
-
-    <Button
-        android:id="@+id/filterButton2"
-        android:layout_width="60dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:text="filter"
-        android:textSize="10sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <SearchView
         android:id="@+id/HomeScreenSearchFilter"
