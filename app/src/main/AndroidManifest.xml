@@ -23,12 +23,6 @@
             android:name=".GalleryActivity"
             android:exported="false" />
         <activity
-            android:name=".DeleteListingActivity"
-            android:exported="false" />
-        <activity
-            android:name=".EditListingActivity"
-            android:exported="false" />
-        <activity
             android:name=".CreateListingActivity"
             android:exported="false" />
         <!--
