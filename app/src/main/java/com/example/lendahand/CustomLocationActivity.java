@@ -44,8 +44,8 @@ public class CustomLocationActivity extends AppCompatActivity implements OnMapRe
     @Override
     public void onMapReady(@NonNull GoogleMap googleMap) {
 
-        LatLng kelowna = new LatLng(49.8801, -119.4436);
-        googleMap.addMarker(new MarkerOptions().position(kelowna).title("Kelowna"));
+        LatLng kelowna = new LatLng(49.94005, -119.39564);
+        googleMap.addMarker(new MarkerOptions().position(kelowna).title("LIB 305"));
 
         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(kelowna, 14));
         googleMap.getUiSettings().setZoomControlsEnabled(true);
