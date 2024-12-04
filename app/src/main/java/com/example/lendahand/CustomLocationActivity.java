@@ -16,8 +16,6 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 public class CustomLocationActivity extends AppCompatActivity implements OnMapReadyCallback {
 
-    private GoogleMap mMap;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,13 +31,12 @@ public class CustomLocationActivity extends AppCompatActivity implements OnMapRe
 
     @Override
     public void onMapReady(@NonNull GoogleMap googleMap) {
-        mMap = googleMap;
 
         LatLng kelowna = new LatLng(49.8801, -119.4436);
-        mMap.addMarker(new MarkerOptions().position(kelowna).title("Kelowna"));
+        googleMap.addMarker(new MarkerOptions().position(kelowna).title("Kelowna"));
 
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(kelowna, 14));
-        mMap.getUiSettings().setZoomControlsEnabled(true);
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(kelowna, 14));
+        googleMap.getUiSettings().setZoomControlsEnabled(true);
         }
 
 }
