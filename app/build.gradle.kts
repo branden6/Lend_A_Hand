@@ -7,6 +7,11 @@ android {
     namespace = "com.example.lendahand"
     compileSdk = 34
 
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
     defaultConfig {
         applicationId = "com.example.lendahand"
         minSdk = 21
@@ -21,8 +26,11 @@ android {
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
-}
 
+    kotlinOptions {
+        jvmTarget = "17"  // Set this to a valid version like "17" or "20"
+    }
+}
 
 dependencies {
     implementation("androidx.core:core-ktx:1.12.0")
