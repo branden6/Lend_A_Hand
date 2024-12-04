@@ -2,7 +2,6 @@ package com.example.lendahand;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RatingBar;
@@ -20,7 +19,7 @@ public class MainActivity extends AppCompatActivity { //homescreen
     ImageView imageView1, imageView2, imageView3, imageView4, imageView5, imageView6;
     TextView textView1, textView2, textView3, textView4, textView5, textView6;
 
-    Button filterButton;
+    ImageView filterButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,13 +35,10 @@ public class MainActivity extends AppCompatActivity { //homescreen
         setTextPriceAndListing();
 
         //When filter button is selected, go to SearchFilterActivity class:
-        filterButton = findViewById(R.id.filterButton);
-        filterButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, SearchFilterActivity.class);
-                startActivity(intent);
-            }
+        filterButton = findViewById(R.id.imageViewBurger);
+        filterButton.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, SearchFilterActivity.class);
+            startActivity(intent);
         });
 
         Button buttonCreateListing = findViewById(R.id.buttonCreateListing);
