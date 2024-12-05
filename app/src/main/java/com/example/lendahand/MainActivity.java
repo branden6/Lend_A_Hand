@@ -82,6 +82,11 @@ public class MainActivity extends AppCompatActivity { //homescreen
         imageView5.setImageResource(R.drawable.weldingmask);
         imageView6 = findViewById(R.id.imageView7);
         imageView6.setImageResource(R.drawable.laserlevel);
+        // Click listener for opening listing
+        imageView1.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, ListingPage.class);
+            startActivity(intent);
+        });
     }
 
     public void setRatingsOnListings(){

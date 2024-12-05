@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:elevation="20dp"
     tools:context=".ListingPage">
 
     <RatingBar
@@ -18,11 +19,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkAvailability" />
 
+    <Button
+        android:id="@+id/x2"
+        android:layout_width="56dp"
+        android:layout_height="wrap_content"
+        android:text="X"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView8"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
         android:id="@+id/imageView8"
-        android:layout_width="412dp"
+        android:layout_width="354dp"
         android:layout_height="225dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.035"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/hammerdrill" />
