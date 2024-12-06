@@ -2,9 +2,11 @@ package com.example.lendahand;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RatingBar;
+import android.widget.SearchView;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -12,6 +14,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity { //homescreen
 
@@ -20,6 +27,7 @@ public class MainActivity extends AppCompatActivity { //homescreen
     TextView textView1, textView2, textView3, textView4, textView5, textView6;
 
     ImageView filterButton;
+    List<Listing> listings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +41,10 @@ public class MainActivity extends AppCompatActivity { //homescreen
         setPicturesOnListings();
         //set the listing price and name with method:
         setTextPriceAndListing();
+
+        filter(); //filters for search button
+
+
 
         //When filter button is selected, go to SearchFilterActivity class:
         filterButton = findViewById(R.id.imageViewBurger);
@@ -53,6 +65,85 @@ public class MainActivity extends AppCompatActivity { //homescreen
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+    private void filter(){
+        SearchView searchView = findViewById(R.id.HomeScreenSearchFilter);
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false; // No action needed for submit
+            }
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                filterListings(newText);
+                return true;
+            }
+        });
+    }
+
+    private void filterListings(String query){
+        if (textView1.getText().toString().toLowerCase().contains(query.toLowerCase())) {
+            textView1.setVisibility(View.VISIBLE);
+            imageView1.setVisibility(View.VISIBLE);
+            ratingBar1.setVisibility(View.VISIBLE);
+        }
+        else {
+            textView1.setVisibility(View.GONE);
+            imageView1.setVisibility(View.GONE);
+            ratingBar1.setVisibility(View.GONE);
+        }
+        if (textView2.getText().toString().toLowerCase().contains(query.toLowerCase())) {
+            textView2.setVisibility(View.VISIBLE);
+            imageView2.setVisibility(View.VISIBLE);
+            ratingBar2.setVisibility(View.VISIBLE);
+        }
+        else {
+            textView2.setVisibility(View.GONE);
+            imageView2.setVisibility(View.GONE);
+            ratingBar2.setVisibility(View.GONE);
+        }
+        if (textView3.getText().toString().toLowerCase().contains(query.toLowerCase())) {
+            textView3.setVisibility(View.VISIBLE);
+            imageView3.setVisibility(View.VISIBLE);
+            ratingBar3.setVisibility(View.VISIBLE);
+        }
+        else {
+            textView3.setVisibility(View.GONE);
+            imageView3.setVisibility(View.GONE);
+            ratingBar3.setVisibility(View.GONE);
+        }
+        if (textView4.getText().toString().toLowerCase().contains(query.toLowerCase())) {
+            textView4.setVisibility(View.VISIBLE);
+            imageView4.setVisibility(View.VISIBLE);
+            ratingBar4.setVisibility(View.VISIBLE);
+        }
+        else {
+            textView4.setVisibility(View.GONE);
+            imageView4.setVisibility(View.GONE);
+            ratingBar4.setVisibility(View.GONE);
+        }
+        if (textView5.getText().toString().toLowerCase().contains(query.toLowerCase())) {
+            textView5.setVisibility(View.VISIBLE);
+            imageView5.setVisibility(View.VISIBLE);
+            ratingBar5.setVisibility(View.VISIBLE);
+        }
+        else {
+            textView5.setVisibility(View.GONE);
+            imageView5.setVisibility(View.GONE);
+            ratingBar5.setVisibility(View.GONE);
+        }
+        if (textView6.getText().toString().toLowerCase().contains(query.toLowerCase())) {
+            textView6.setVisibility(View.VISIBLE);
+            imageView6.setVisibility(View.VISIBLE);
+            ratingBar6.setVisibility(View.VISIBLE);
+        }
+        else {
+            textView6.setVisibility(View.GONE);
+            imageView6.setVisibility(View.GONE);
+            ratingBar6.setVisibility(View.GONE);
+        }
+
     }
     public void setTextPriceAndListing(){
         textView1 = findViewById(R.id.textView);

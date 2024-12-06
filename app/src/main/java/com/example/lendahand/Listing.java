@@ -7,6 +7,7 @@ public class Listing {
     private String price;
     private String priceUnit;
     private String postalCode;
+    private float starRating;
 
     public Listing(String title, String description, int imageResId, String price, String priceUnit, String postalCode) {
         this.title = title;
@@ -15,6 +16,15 @@ public class Listing {
         this.price = price;
         this.priceUnit = priceUnit;
         this.postalCode = postalCode;
+    }
+    public Listing(String title, float rating, String price, int imageResId) {
+        this.title = title;
+        this.starRating = rating;
+        this.price = price;
+        this.imageResId = imageResId;
+    }
+    public float getStarRating() {
+        return starRating;
     }
 
     public String getTitle() {
