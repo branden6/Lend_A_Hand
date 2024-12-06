@@ -31,6 +31,10 @@ public class SearchFilterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_search_filter);
         setupButtons();
 
+        double latitude = getIntent().getDoubleExtra("latitude", 0);
+        double longitude = getIntent().getDoubleExtra("longitude", 0);
+        boolean getCheckedButton = getIntent().getBooleanExtra("getCheckedButton", false);
+
         seeResults = findViewById(R.id.buttonSeeResults);
         seeResults.setOnClickListener(v -> {
             Intent intent = new Intent(SearchFilterActivity.this, ResultsPage.class);
@@ -83,13 +87,26 @@ public class SearchFilterActivity extends AppCompatActivity {
     public void SelectedRadioLocations(){
         radioButtonCustomLocation = findViewById(R.id.radioButtonCustomLocation);
         locationGroup = findViewById(R.id.radioGroupLocation); //getting radioGroup for location
+
+        boolean getCheckedButton = getIntent().getBooleanExtra("getCheckedButton", false);
+
+        if (getCheckedButton) {
+            radioButtonCustomLocation.setChecked(true);
+        }
+
         //if custom radius is selected, starts a new Google Maps view activity
-        locationGroup.setOnCheckedChangeListener((group, checkedId) -> {
-            if (checkedId == R.id.radioButtonCustomLocation) {
-                Intent intent = new Intent(SearchFilterActivity.this, CustomLocationActivity.class);
-                intent.putExtra("CustomRadius", "customLocation");
-                startActivity(intent);
+        radioButtonCustomLocation.setOnClickListener(v -> {
+            Intent intent = new Intent(SearchFilterActivity.this, CustomLocationActivity.class);
+
+            // Send previous latitude and longitude if available
+            if (getIntent().hasExtra("latitude") && getIntent().hasExtra("longitude")) {
+                double latitude = getIntent().getDoubleExtra("latitude", 0.0);
+                double longitude = getIntent().getDoubleExtra("longitude", 0.0);
+                intent.putExtra("latitude", latitude);
+                intent.putExtra("longitude", longitude);
             }
+            intent.putExtra("CustomRadius", "customLocation");
+            startActivity(intent);
         });
     }
 

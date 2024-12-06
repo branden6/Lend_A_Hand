@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -12,8 +13,10 @@ import androidx.appcompat.app.AppCompatActivity;
 public class ListingPage extends AppCompatActivity {
     Button contactRenter;
     Button viewRenterRatings;
+    Button x;
     Button checkAvailability;
     ImageButton openMap;
+    ImageView listerProfile;
 
     double dayPrice;
     double hourPrice;
@@ -31,6 +34,14 @@ public class ListingPage extends AppCompatActivity {
         contactRenter = findViewById(R.id.contactRenter);
         viewRenterRatings = findViewById(R.id.viewRenterRatings);
         openMap = findViewById(R.id.openMap);
+        x = findViewById(R.id.x2);
+        listerProfile = findViewById(R.id.listerProfile);
+
+        listerProfile.setImageResource(R.drawable.user);
+
+        x.setOnClickListener(v -> {
+           finish();
+        });
 
         checkAvailability.setOnClickListener(v -> {
             // Handle the click event for checkAvailability button
