@@ -146,7 +146,7 @@
         android:id="@+id/viewRenterRatings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="View Renter Ratings"
+        android:text="Write a Review"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/listerProfile"
         app:layout_constraintTop_toBottomOf="@+id/listingRating" />
